@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://cjr61xf1u8bej"]
+
+[ext_resource type="Script" uid="uid://bqc05vwaco5y2" path="res://Scripts/GameOver.cs" id="1_m5628"]
+
+[node name="GameOver" type="Control" unique_id=358035320]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m5628")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1226956551]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.019607844, 0.019607844, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=211113621]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=986211648]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer" unique_id=574232953]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.09019608, 0.26666668, 1)
+theme_override_font_sizes/font_size = 40
+text = "FALHA NO SUPORTE DE VIDA"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2038409625]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8039216, 0.8235294, 1)
+text = "O suprimento de oxigênio esgotou antes da ativação dos sistemas de fuga."
+horizontal_alignment = 1
+
+[node name="RetryButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1521888887]
+unique_name_in_owner = true
+layout_mode = 2
+text = "REINICIAR TENTATIVA"
+
+[node name="MenuButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1483380866]
+unique_name_in_owner = true
+layout_mode = 2
+text = "MENU PRINCIPAL
+"
