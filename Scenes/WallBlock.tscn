@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cqrsytguqvhkb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dkare"]
+albedo_color = Color(0.11764706, 0.13333334, 0.16078432, 1)
+metallic = 0.5
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="BoxMesh_5j1dp"]
+size = Vector3(3, 3.5, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5j1dp"]
+size = Vector3(3, 3.5, 3)
+
+[node name="WallBlock" type="StaticBody3D" unique_id=1261751700]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=795211333]
+material_override = SubResource("StandardMaterial3D_dkare")
+mesh = SubResource("BoxMesh_5j1dp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1810108744]
+shape = SubResource("BoxShape3D_5j1dp")

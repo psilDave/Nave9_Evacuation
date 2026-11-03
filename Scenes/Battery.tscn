@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://d08kjo1m8kown"]
+
+[ext_resource type="Script" uid="uid://drhyi50u1hpyf" path="res://Scripts/Battery.cs" id="1_neag5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5j1dp"]
+emission_enabled = true
+emission = Color(1, 0.54901963, 0, 1)
+emission_energy_multiplier = 3.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5j1dp"]
+lightmap_size_hint = Vector2i(7, 8)
+material = SubResource("StandardMaterial3D_5j1dp")
+top_radius = 0.15
+bottom_radius = 0.15
+height = 0.5
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_nlolp"]
+height = 0.5
+radius = 0.15
+
+[node name="Battery" type="StaticBody3D" unique_id=705108923]
+script = ExtResource("1_neag5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2018124438]
+mesh = SubResource("CylinderMesh_5j1dp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1897157140]
+shape = SubResource("CylinderShape3D_nlolp")

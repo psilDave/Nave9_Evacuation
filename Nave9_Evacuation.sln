@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nave9_Evacuation", "Nave9_Evacuation.csproj", "{C815FE3A-9C9C-471F-89D8-1175903852BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C815FE3A-9C9C-471F-89D8-1175903852BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C815FE3A-9C9C-471F-89D8-1175903852BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C815FE3A-9C9C-471F-89D8-1175903852BA}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{C815FE3A-9C9C-471F-89D8-1175903852BA}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{C815FE3A-9C9C-471F-89D8-1175903852BA}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{C815FE3A-9C9C-471F-89D8-1175903852BA}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
