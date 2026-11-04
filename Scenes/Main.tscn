@@ -2,16 +2,26 @@
 
 [ext_resource type="Script" uid="uid://chn1rxqk1yd45" path="res://Scripts/Main.cs" id="1_jw32o"]
 [ext_resource type="Script" uid="uid://c41ppmjykwbcf" path="res://Scripts/MazeGenerator.cs" id="1_kln2b"]
+[ext_resource type="Texture2D" uid="uid://c2hyta6o7xqdh" path="res://Assets/CorrugatedSteel009_1K-JPG_Color.jpg" id="2_grg3l"]
 [ext_resource type="PackedScene" uid="uid://d34usivbxrui6" path="res://Scenes/Player.tscn" id="2_rgh2o"]
 [ext_resource type="PackedScene" uid="uid://cqrsytguqvhkb" path="res://Scenes/WallBlock.tscn" id="3_50glp"]
+[ext_resource type="Texture2D" uid="uid://dmenpjmwd758m" path="res://Assets/CorrugatedSteel009_1K-JPG_NormalGL.jpg" id="3_frkhe"]
 [ext_resource type="PackedScene" uid="uid://dgatm5ur2jh1a" path="res://Scenes/HUD.tscn" id="3_pbw6q"]
 [ext_resource type="PackedScene" uid="uid://d08kjo1m8kown" path="res://Scenes/Battery.tscn" id="4_vy5pj"]
 [ext_resource type="PackedScene" uid="uid://dwmtqpttqgppw" path="res://Scenes/EscapePod.tscn" id="5_bmxlf"]
+[ext_resource type="AudioStream" uid="uid://464wm7s2jbxc" path="res://Assets/ambient.wav" id="8_bmxlf"]
+[ext_resource type="AudioStream" uid="uid://bnr7se5yq5c6n" path="res://Assets/collect.wav" id="9_4kpch"]
+[ext_resource type="AudioStream" uid="uid://coa2qiscbnkuq" path="res://Assets/unlock.wav" id="10_grg3l"]
 
-[sub_resource type="Environment" id="Environment_dkare"]
+[sub_resource type="Environment" id="Environment_0nskc"]
+ambient_light_energy = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5j1dp"]
 albedo_color = Color(0.07058824, 0.08235294, 0.101960786, 1)
+albedo_texture = ExtResource("2_grg3l")
+normal_enabled = true
+normal_texture = ExtResource("3_frkhe")
+uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dkare"]
 albedo_color = Color(0.07058824, 0.08235294, 0.101960786, 1)
@@ -22,7 +32,7 @@ script = ExtResource("1_jw32o")
 [node name="Enviroment" type="Node3D" parent="." unique_id=85371127]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Enviroment" unique_id=1422179143]
-environment = SubResource("Environment_dkare")
+environment = SubResource("Environment_0nskc")
 
 [node name="Map" type="Node3D" parent="." unique_id=1394669902]
 
@@ -49,3 +59,14 @@ EscapePodScene = ExtResource("5_bmxlf")
 [node name="Player" parent="." unique_id=1551961676 instance=ExtResource("2_rgh2o")]
 
 [node name="HUD" parent="." unique_id=354427293 instance=ExtResource("3_pbw6q")]
+
+[node name="AmbientSound" type="AudioStreamPlayer" parent="." unique_id=1815037206]
+stream = ExtResource("8_bmxlf")
+volume_db = -10.0
+autoplay = true
+
+[node name="CollectSound" type="AudioStreamPlayer" parent="." unique_id=1756766383]
+stream = ExtResource("9_4kpch")
+
+[node name="UnlockSound" type="AudioStreamPlayer" parent="." unique_id=1790276137]
+stream = ExtResource("10_grg3l")

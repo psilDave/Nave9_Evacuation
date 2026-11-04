@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://cqrsytguqvhkb"]
 
+[ext_resource type="Texture2D" uid="uid://c2hyta6o7xqdh" path="res://Assets/CorrugatedSteel009_1K-JPG_Color.jpg" id="1_mxqkk"]
+[ext_resource type="Texture2D" uid="uid://dmenpjmwd758m" path="res://Assets/CorrugatedSteel009_1K-JPG_NormalGL.jpg" id="2_8afek"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dkare"]
 albedo_color = Color(0.11764706, 0.13333334, 0.16078432, 1)
+albedo_texture = ExtResource("1_mxqkk")
 metallic = 0.5
 roughness = 0.8
+normal_enabled = true
+normal_texture = ExtResource("2_8afek")
+uv1_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_5j1dp"]
 size = Vector3(3, 3.5, 3)
